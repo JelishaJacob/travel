@@ -1,0 +1,98 @@
+<!-- Navbar -->
+<!-- <div class="nav-bar">
+    <div class="position-relative p-0 " style="z-index: 9;">
+        <nav style="background-color:rgb(154, 221, 90);"
+            class="navbar navbar-expand-lg navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"> -->
+<!-- background-color: rgb(154, 221, 90);  #7AB730 -->
+<!-- <a href="" class="navbar-brand">
+                <h1 id="he" class="ms-5 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="container navbar-nav ml-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="package.html" class="nav-item nav-link">Tour Packages</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu border-0 rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            <a href="destination.html" class="dropdown-item">Destination</a>
+                            <a href="guide.html" class="dropdown-item">Travel Guides</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div> -->
+<!-- Navbar End -->
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #1c4af0e3">
+    <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+                <li class="nav-item">
+                    <!-- <img src="./images/logo.png" alt=""> -->
+                    <h1 id="he" class="ms-5" style="color: rgb(107 172 45);"><span class="text-white">TRAVEL</span>ER
+                    </h1>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="">HOME</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">GALLERY</a>
+                </li> -->
+                <li class="nav-item">
+                    <a (click)="addReview()" class="nav-link" style="cursor: pointer;">REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="user-login">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="admin-login">ADMIN LOGIN</a>
+                </li>
+
+                <div *ngIf="login" class="dropdown container">
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- <i class="fa-solid fa-circle-user fa-lg"></i> -->
+                        <i class="fa-solid fa-circle-user fa-2x" style="color: #e2e8f3;"></i>
+
+                    </button>
+                    <ul class="dropdown-menu ">
+                        <li (click)="myBookingsPage()"><a class="dropdown-item" style="cursor: pointer;">My Bookings</a>
+                        </li>
+                        <!-- <li><a class="dropdown-item">Delete Account</a></li> -->
+                        <li (click)="logout()"><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- <div>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="admin-login">LOGOUT</a>
+                    </li>
+                </div> -->
+                <!-- <li class="nav-item"> -->
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        id="button">
+                        REGISTER
+                    </button>
+
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>

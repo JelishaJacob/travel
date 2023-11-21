@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="text-center m-5">
+        <!-- <button (click)="addPackage()" class="btn text-end text-white p-2" style="background-color: #1c4af0e3;">Add New
+            Package</button> -->
+        <h1 style="color: rgb(79, 138, 23); text-transform: uppercase;">Users Management</h1>
+    </div>
+
+    <div class="table-responsive-md m-4 mt-4 pt-2">
+        <table class="table table-light table-hover table-striped p-0 m-0 mb-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="">Email</th>
+                    <th scope="col" class="">Phone No.</th>
+                    <th scope="col" class="">Address</th>
+                    <th scope="col " class="">State</th>
+                    <th scope="col" class="">City</th>
+                    <th scope="col" class="">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of udata, let j=index">
+                    <th scope="row" class="">{{j+1}}</th>
+                    <td class="">{{i.uname}}</td>
+                    <td class="">{{i.email}}</td>
+                    <td class="">{{i.phn}}</td>
+                    <td class="">{{i.address}}</td>
+                    <td>{{i.state}}</td>
+                    <td>{{i.city}}</td>
+                    <td class="">
+                        <!-- (click)="editPage(i._id)"  (click)="remove(i._id)" -->
+                        <!-- <button (click)="(i._id)" class="btn btn-success me-1"><i class="fa-solid fa-person-walking-luggage fa-lg" style="color: #fafafa;"></i></button> -->
+                        <button (click)="remove(i._id)" class="btn btn-danger ms-1"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

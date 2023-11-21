@@ -1,0 +1,64 @@
+<div id="br" class="container-fluid"
+    style="background-image: url('https://i.postimg.cc/fLj5SchY/travel-review.jpg'); height: auto">
+
+    <div class="row">
+        <div class="col-lg-8 col-md-12">
+
+        </div>
+
+        <div id="r1" class="col-lg-4 col-md-12 mt-5">
+            <form (ngSubmit)="addReview()" [formGroup]="userReviewForm" action=""
+                class="text-center mt-2 pt-2 ps-5 pe-5 pb-3 container w-100">
+                <!-- <h1 class=" mb-5 mt-4" style="color: rgb(107 172 45);">Review</h1> -->
+
+                <!-- formControlName="email" -->
+                <!-- <input name="email" id="em" type="email" placeholder="Email" class="form-control mt-5"> <br> -->
+                <!-- <div *ngIf="this.userLoginForm.get('email')?.errors && this.userLoginForm.get('email')?.touched">
+                    <p class="text-danger">*Provide Valid Email-Id</p>
+                </div> -->
+                <textarea formControlName="comments" name="comments" id="cm" cols="40" rows="5"
+                    placeholder="Comments..." class="form-control mt-4"></textarea><br>
+                <div
+                    *ngIf="this.userReviewForm.get('comments')?.errors && this.userReviewForm.get('comments')?.touched">
+                    <p class="text-danger">*Please Share Your Comments Here</p>
+                </div>
+
+                <button type="submit" class="btn w-100 text-white p-2 mb-4" style="background-color: rgb(107 172 45);font-size: 20px;
+                    font-weight: 500;">Add</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container-fluid py-1">
+        <div class="container  pb-3">
+            <div class="text-start mb-4 ms-4 ps-5">
+                <h1 id="rh1"><i class="fa-solid fa-comments fa-xl me-2"></i> Reviews</h1>
+            </div>
+            <div class="row pb-3">
+
+                <div *ngFor="let i of data" class="col-lg-6 col-md-12 pb-2 pe-2">
+                        <div class="blog-item me-3">
+                            <div class="p-4 mb-2">
+                                    <h6>{{i.comments}}</h6>
+                                    <h6 style="color: rgb(71, 133, 13);" class="text-end mt-0 pt-0">-{{i.uname}}</h6>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- <div class="col-lg-6 col-md-6 mb-4 pb-2">
+                    <div class="blog-item">
+                        <div class="p-4 h-50  mb-2">
+                            <h5>Had a wonderful trip with my family. Enjoyed the beauty of Ooty.</h5>
+                            <h6 style="color: rgb(71, 133, 13);" class="text-end mt-0 pt-0">- Jenshel Jacob</h6>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

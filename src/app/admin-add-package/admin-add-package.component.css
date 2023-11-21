@@ -1,0 +1,17 @@
+form input {
+    width: 95%;
+    border: 2px rgb(152 153 158 / 70%) ridge;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btun {
+    background-color: rgb(107 172 45);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+}
+.btun:hover{
+    background-color: rgb(55, 104, 9);;
+}

@@ -1,0 +1,68 @@
+<div class="row m-0 p-0">
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+    <div class="col-lg-6 col-md-12 ">
+        <form (ngSubmit)="addPackage()" [formGroup]="addPackageForm"  class="container text-center mb-3" action="">
+            <h1 class="mt-4 mb-4 " style="color: rgb(107 172 45);">Package Details</h1>
+
+            <input formControlName="title" type="text" name="title" id="pt" placeholder="Package Title" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('title')?.errors && this.addPackageForm.get('title')?.touched">
+                <p class="text-danger">*Accept Charecters and Numbers Only</p>
+            </div>
+
+            <input formControlName="place" type="text" name="place" id="pn" placeholder="Destination" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('place')?.errors && this.addPackageForm.get('place')?.touched">
+                <p class="text-danger">*Accept Charecters and Numbers Only</p>
+            </div>
+
+            <input formControlName="duration" type="text" name="duration" id="d1" placeholder="Duration"  class="form-control p-2 mb-2 "> 
+            <div *ngIf="this.addPackageForm.get('duration')?.errors && this.addPackageForm.get('duration')?.touched">
+                <p class="text-danger">*Accept Charecters and Numbers Only</p>
+            </div>
+
+            <input formControlName="travellers" type="text" name="travellers" id="t1" placeholder="Number Of Travellers" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('travellers')?.errors && this.addPackageForm.get('travellers')?.touched">
+                <p class="text-danger">*Accept Numbers Only</p>
+            </div>
+
+            <input formControlName="image" type="text" name="image" id="im" placeholder="Image" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('image')?.errors && this.addPackageForm.get('image')?.touched">
+                <p class="text-danger">*Accept URL Only</p>
+            </div>
+
+            <input formControlName="rating" type="text" name="rating" id="r1" placeholder="Rating" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('rating')?.errors && this.addPackageForm.get('rating')?.touched">
+                <p class="text-danger">*Accept Numbers Only</p>
+            </div>
+
+            <input formControlName="price" type="text" name="price" id="pr" placeholder="Price" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('price')?.errors && this.addPackageForm.get('price')?.touched">
+                <p class="text-danger">*Accept Numbers Only</p>
+            </div>
+
+            <input formControlName="image1" type="text" name="image1" id="im1" placeholder="Image 1" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('image1')?.errors && this.addPackageForm.get('image1')?.touched">
+                <p class="text-danger">*Accept URL Only</p>
+            </div>
+
+            <input formControlName="image2" type="text" name="image2" id="im2" placeholder="Image 2" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('image2')?.errors && this.addPackageForm.get('image2')?.touched">
+                <p class="text-danger">*Accept URL Only</p>
+            </div>
+
+            <input formControlName="image3" type="text" name="image3" id="im3" placeholder="Image 3" class="form-control p-2 mb-2">
+            <div *ngIf="this.addPackageForm.get('image3')?.errors && this.addPackageForm.get('image3')?.touched">
+                <p class="text-danger">*Accept URL Only</p>
+            </div>
+
+            <button type="submit" class="btun p-2 pe-5 ps-5 me-3 mt-3">Add Package</button>
+            <button (click)="back()" class="btun p-2 pe-5 ps-5  mt-3">Go Back</button>
+
+        </form>
+    </div>
+    
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+</div>

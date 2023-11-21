@@ -1,0 +1,32 @@
+#he{
+    font-weight: 700;
+}
+.navbar{
+    position: sticky;
+    top: 0px;
+    z-index:3;
+}
+.nav-link{
+    /* color:darkslateblue; */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+.nav-link:hover{
+    /* color:darkviolet; */
+    /* color:  rgb(107 172 45); */
+    color: white;
+}
+
+.dropdown{
+    position: sticky;
+    top: 5px;
+    z-index:1;
+}
+.dropdown a{
+    color: black;
+}
+.dropdown a:hover{
+    background-color:#1c4af0e3;
+    color: white;
+}

@@ -1,0 +1,62 @@
+<div class="row mt-5 mb-5">
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+         
+        <form (ngSubmit)="register()" [formGroup]="userRegisterForm" action="" class="text-center pt-5 ps-5 pe-5 pb-3 bg-white container w-75">
+            <h1 class=" mb-4 " style="color: rgb(107 172 45);">Sign Up</h1>
+
+            <input formControlName="uname" name="u1" id="an" type="text" placeholder="Name" class="form-control"> <br>
+            <div *ngIf="this.userRegisterForm.get('uname')?.errors && this.userRegisterForm.get('uname')?.touched">
+                <p class="text-danger">*Accept Charecters Only</p>
+            </div>
+
+            
+            <input formControlName="email" name="e1" id="em" type="email" placeholder="Email" class="form-control "> <br>
+            <div *ngIf="this.userRegisterForm.get('email')?.errors && this.userRegisterForm.get('email')?.touched">
+                <p class="text-danger">*Please Provide Valid Email-Id</p>
+            </div>
+    
+            <input formControlName="phn" name="phn" id="ph" type="text" placeholder="Phone Number" class="form-control "> <br>
+            <div *ngIf="this.userRegisterForm.get('phn')?.errors && this.userRegisterForm.get('phn')?.touched">
+                <p class="text-danger">*Accept Numbers Only</p>
+            </div>
+
+            <textarea formControlName="address" name="address" id="ad" cols="40" rows="1" placeholder="Address" class="form-control "></textarea><br>
+            <div *ngIf="this.userRegisterForm.get('address')?.errors && this.userRegisterForm.get('address')?.touched">
+                <p class="text-danger">*Accept Charecters and Numbers</p>
+            </div>
+    
+            <input formControlName="state" name="state" id="st" type="text" placeholder="State" class="form-control "> <br>
+            <div *ngIf="this.userRegisterForm.get('state')?.errors && this.userRegisterForm.get('state')?.touched">
+                <p class="text-danger">*Accept Charecters Only</p>
+            </div>
+
+            <input formControlName="city" name="city" id="ct" type="text" placeholder="City" class="form-control "> <br>
+            <div *ngIf="this.userRegisterForm.get('city')?.errors && this.userRegisterForm.get('city')?.touched">
+                <p class="text-danger">*Accept Charecters Only</p>
+            </div>
+
+            <input formControlName="psw"  name="psw" id="pwd" type="password" placeholder="PassWord" class="form-control "> <br>
+            <div *ngIf="this.userRegisterForm.get('psw')?.errors && this.userRegisterForm.get('psw')?.touched">
+                <p class="text-danger">*Accept Charecters, Numbers and Special Charecters</p>
+            </div>
+
+            <input formControlName="cpsw" name="cpsw" id="cpwd" type="password" placeholder="Confirm Password" class="form-control "> <br>
+            <div *ngIf="pswCheck">
+                <p class="text-danger">* Password Doesn't Match</p>
+              </div>
+
+            <button type="submit" class="btn w-100 text-white p-2 mb-2"
+                style="background-color: rgb(107 172 45);font-size: 20px;
+                font-weight: 500;">Register</button>
+        </form>
+    </div>
+
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+
+</div>

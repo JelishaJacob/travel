@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div id="book" class="row">
+        <div class="col-lg-3 col-md-12">
+
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+            <form (ngSubmit)="book()" [formGroup]="userBookingForm" action=""
+                class="text-center pt-4 ps-5 pe-5 pb-3 bg-white container w-75 mt-3 mb-3">
+                <h1 class=" mb-4 " style="color: rgb(107 172 45);">Let's Plan Your Trip</h1>
+
+
+                <input formControlName="name" name="name" id="n1" type="text" placeholder="Name" class="form-control">
+                <br>
+                <div *ngIf="this.userBookingForm.get('name')?.errors && this.userBookingForm.get('name')?.touched">
+                    <p class="text-danger">*Accept Charecters Only</p>
+                </div>
+
+                <input formControlName="email" name="email" id="em" type="email" placeholder="Email-Id"
+                    class="form-control "> <br>
+                <div *ngIf="this.userBookingForm.get('email')?.errors && this.userBookingForm.get('email')?.touched">
+                    <p class="text-danger">*Please Provide Valid Email-Id</p>
+                </div>
+
+                <input formControlName="phn" name="phn" id="ph" type="number" placeholder="Phone Number"
+                    class="form-control"> <br>
+                <div *ngIf="this.userBookingForm.get('phn')?.errors && this.userBookingForm.get('phn')?.touched">
+                    <p class="text-danger">*Please Provide Valid Mobile Number</p>
+                </div>
+
+                <input formControlName="destination" name="destination" id="d1" type="text"
+                    placeholder="Travel Destination" class="form-control"> <br>
+                <div
+                    *ngIf="this.userBookingForm.get('destination')?.errors && this.userBookingForm.get('destination')?.touched">
+                    <p class="text-danger">*Accept Charecters and Numbers Only</p>
+                </div>
+
+                <input formControlName="duration" name="duration" id="dr1" type="text" placeholder="Duration"
+                    class="form-control"> <br>
+                <div
+                    *ngIf="this.userBookingForm.get('duration')?.errors && this.userBookingForm.get('duration')?.touched">
+                    <p class="text-danger">*Accept Charecters and Numbers Only</p>
+                </div>
+
+                <input formControlName="sdate" name="sdate" id="sdt" onfocus="(this.type='date')"
+                    onblur="(this.type='text')" placeholder="Starting Date" class="form-control"> <br>
+                <div *ngIf="this.userBookingForm.get('sdates')?.errors && this.userBookingForm.get('sdates')?.touched">
+                    <p class="text-danger">*Please Provide Suitable Date</p>
+                </div>
+
+                <input formControlName="travellers" name="travellers" id="tr" type="text"
+                    placeholder="No. of Travellers" class="form-control"> <br>
+                <div
+                    *ngIf="this.userBookingForm.get('travellers')?.errors && this.userBookingForm.get('travellers')?.touched">
+                    <p class="text-danger">*Accept Only Charecters and Numbers</p>
+                </div>
+
+                <button type="submit" class=" w-100 text-white p-2 mb-2" style="background-color: rgb(107 172 45);font-size: 20px;
+                    font-weight: 500; border:none">Submit</button>
+            </form>
+        </div>
+
+        <div class="col-lg-3 col-md-12">
+
+        </div>
+    </div>
+</div>

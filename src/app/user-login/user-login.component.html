@@ -1,0 +1,34 @@
+<div class="row container-fluid mt-5 mb-5">
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+         
+        <form (ngSubmit)="login()" [formGroup]="userLoginForm" action="" class="text-center pt-5 ps-5 pe-5 pb-3 bg-white container w-75">
+            <h1 class=" mb-4 " style="color: rgb(107 172 45);">Sign In</h1>
+
+            
+            <input formControlName="email"  name="email" id="em" type="email" placeholder="Email" class="form-control"> <br>
+            <div *ngIf="this.userLoginForm.get('email')?.errors && this.userLoginForm.get('email')?.touched">
+                <p class="text-danger">*Provide Valid Email-Id</p>
+            </div>
+
+            <input formControlName="psw"  name="psw" id="pwd" type="password" placeholder="PassWord" class="form-control "> <br>
+            <div *ngIf="this.userLoginForm.get('psw')?.errors && this.userLoginForm.get('psw')?.touched">
+                <p class="text-danger">*Accept Charecters, Numbers and Special Charecters Only</p>
+            </div>
+    
+            <button type="submit" class="btn w-100 text-white p-2 mb-2"
+                style="background-color: rgb(107 172 45);font-size: 20px;
+                font-weight: 500;">Login</button>
+
+            <p>Not registered yet? <a routerLink="/user-register">register</a></p>
+        </form>
+    </div>
+
+    <div class="col-lg-3 col-md-12">
+
+    </div>
+
+</div>

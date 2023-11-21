@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="text-end m-3">
+        <button (click)="addPackage()" class="btn text-end text-white p-2" style="background-color: #1c4af0e3;">Add New
+            Package</button>
+    </div>
+
+    <div class="table-responsive-md">
+        <table class="table table-light table-hover table-striped p-0 m-0 mb-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col" class="">Destination </th>
+                    <th scope="col" class="">Image</th>
+                    <th scope="col" class="">Durartion</th>
+                    <th scope="col " class="">Travellers</th>
+                    <th scope="col" class="p-2">Price</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Images</th>
+                    <th scope="col" class="p-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of pdata, let j=index">
+                    <th scope="row" class="p-2">{{j+1}}</th>
+                    <td class="p-2">{{i.title}}</td>
+                    <td class="p-2">{{i.place}}</td>
+                    <td class="p-2">
+                        <img style="height: 75px;" src="{{i.image}}" alt="">
+                    </td>
+                    <td class="p-2">{{i.duration}}</td>
+                    <td class="p-2">{{i.travellers}}</td>
+                    <td>Rs. {{i.price}}</td>
+                    <td>{{i.rating}}</td>
+                    <td class="p-2">
+                        <div class="row p-0  m-0">
+                            <div class="col-lg-4 col-md-12"><img class="ps-1 pt-1" style="height: 75px; width: 100%;" src="{{i.image1}}" alt=""></div>
+                            <div class="col-lg-4 col-md-12"><img class="ps-1 pt-1" style="height: 75px;width: 100%;" src="{{i.image2}}" alt=""></div>
+                            <div class="col-lg-4 col-md-12"><img class="ps-1 pt-1" style="height: 75px;width: 100%;" src="{{i.image3}}" alt=""></div>
+                        </div>
+                    </td>
+                    <td class="p-2">
+                        <!-- (click)="editPage(i._id)"  (click)="remove(i._id)" -->
+                        <button (click)="editPage(i._id)" class="btn btn-warning "><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button (click)="remove(i._id)" class="btn btn-danger mt-2"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

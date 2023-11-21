@@ -1,0 +1,102 @@
+<div>
+    <h1 class="ms-5 mt-5 text-uppercase" style="color: rgb(107 172 45);">{{pdata.title}}</h1>
+    <p class="text-lowercase" style="font-weight: 500;"><i class="fa-solid fa-location-dot fa-xl ms-5"
+            style="color: rgb(107 172 45);"></i> {{pdata.place}} </p>
+    <!-- style="color: #63b545;" -->
+    <hr>
+</div>
+
+<div class="container-fluid">
+    <div id="package-item" class="row mb-3">
+        <div class="col-lg-8 container">
+            <div class="row container">
+                <div class="col-lg-3 col-md-12 mt-3 "><i class="fa-sharp fa-solid fa-clock fa-2x ms-5 "></i>
+                    {{pdata.duration}}</div>
+                <div class="col-lg-3 col-md-12 mt-3 "><i class="fa-solid fa-person fa-2x ms-5"></i> {{pdata.travellers}}
+                    Persons</div>
+                <div class="col-lg-3 col-md-12 mt-3 "><i class="fa-solid fa-star fa-2x ms-5"></i> {{pdata.rating}} Rating
+                </div>
+                <div class="col-lg-3 col-md-12 mt-3"><i class="fa-solid fa-indian-rupee-sign fa-2x ms-5"></i>
+                    {{pdata.price}}</div>
+            </div>
+
+            <div id="carouselExample" class="carousel slide container-fluid mb-5 mt-5">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{pdata.image}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{pdata.image1}}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{pdata.image2}}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    
+        <div class="col-lg-4 col-md-12">
+            <div class="container mt-5 pt-5">
+                 
+                <form (ngSubmit)="packageBook()" [formGroup]="packageBookForm" action=""
+                        class="text-center bg-white container">
+                        <h1 class=" mb-4 pt-4" style="color: rgb(107 172 45);">Let's Plan Your Trip</h1>
+        
+        
+                        <input formControlName="name" name="name" id="n1" type="text" placeholder="Name" class="form-control ms-4">
+                        <br>
+                        
+                        <div *ngIf="this.packageBookForm.get('name')?.errors && this.packageBookForm.get('name')?.touched">
+                            <p class="text-danger">*Accept Charecters Only</p>
+                        </div>
+        
+                        
+                        <input formControlName="email" name="email" id="em" type="email" placeholder="Email-Id"
+                            class="form-control ms-4"> <br>
+                        <div *ngIf="this.packageBookForm.get('email')?.errors && this.packageBookForm.get('email')?.touched">
+                            <p class="text-danger">*Please Provide Valid Email-Id</p>
+                        </div>
+        
+                        
+                        <input formControlName="phn" name="phn" id="ph" type="number" placeholder="Phone Number"
+                            class="form-control ms-4"> <br>
+                        <div *ngIf="this.packageBookForm.get('phn')?.errors && this.packageBookForm.get('phn')?.touched">
+                            <p class="text-danger">*Please Provide Valid Mobile Number</p>
+                        </div>
+        
+                        
+                        <input formControlName="sdate" name="sdate" id="sdt" onfocus="(this.type='date')"
+                            onblur="(this.type='text')" placeholder="Starting Date" class="form-control ms-4"> <br>
+                        <div *ngIf="this.packageBookForm.get('sdate')?.errors && this.packageBookForm.get('sdate')?.touched">
+                            <p class="text-danger">*Please Provide Suitable Date</p>
+                        </div>
+                        
+                        <button type="submit" class="btn w-100 text-white p-2 mb-5" style="background-color: rgb(107 172 45);font-size: 20px;
+                            font-weight: 500; border:none">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 mt-4">
+            
+        </div>
+    
+        <div class="col-lg-4 col-md-12">
+            
+            
+        </div>
+    </div>
+</div> -->

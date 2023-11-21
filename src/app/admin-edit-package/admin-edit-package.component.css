@@ -1,0 +1,10 @@
+.btun {
+    background-color: rgb(107 172 45);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+}
+.btun:hover{
+    background-color: rgb(55, 104, 9);;
+}
